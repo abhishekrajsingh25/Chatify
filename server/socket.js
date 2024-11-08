@@ -5,7 +5,7 @@ import Channel from "./models/ChannelModel.js";
 const setupSocket = (server) => {
   const io = new SockerIOServer(server, {
     cors: {
-      origin: process.env.ORIGIN,
+      origin: "*",
       methods: ["GET", "POST"],
       credentials: true,
     },
